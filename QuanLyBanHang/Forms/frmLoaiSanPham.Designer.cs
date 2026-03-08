@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnXuat = new Button();
+            btnNhap = new Button();
             btnThoat = new Button();
             btnHuyBo = new Button();
             btnLuu = new Button();
@@ -39,7 +41,7 @@
             label1 = new Label();
             groupBox2 = new GroupBox();
             dataGridView = new DataGridView();
-            Id = new DataGridViewTextBoxColumn();
+            ID = new DataGridViewTextBoxColumn();
             TenLoai = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -48,6 +50,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnXuat);
+            groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(btnHuyBo);
             groupBox1.Controls.Add(btnLuu);
@@ -58,14 +62,34 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1054, 119);
+            groupBox1.Size = new Size(1121, 119);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin loại sản phẩm";
             // 
+            // btnXuat
+            // 
+            btnXuat.Location = new Point(1006, 70);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(94, 29);
+            btnXuat.TabIndex = 2;
+            btnXuat.Text = "Xuất";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
+            // btnNhap
+            // 
+            btnNhap.Location = new Point(893, 70);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(94, 29);
+            btnNhap.TabIndex = 2;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
+            // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(935, 70);
+            btnThoat.Location = new Point(776, 70);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(94, 29);
             btnThoat.TabIndex = 2;
@@ -75,7 +99,7 @@
             // 
             // btnHuyBo
             // 
-            btnHuyBo.Location = new Point(797, 70);
+            btnHuyBo.Location = new Point(663, 70);
             btnHuyBo.Name = "btnHuyBo";
             btnHuyBo.Size = new Size(94, 29);
             btnHuyBo.TabIndex = 2;
@@ -85,7 +109,7 @@
             // 
             // btnLuu
             // 
-            btnLuu.Location = new Point(649, 70);
+            btnLuu.Location = new Point(546, 70);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(94, 29);
             btnLuu.TabIndex = 2;
@@ -95,7 +119,7 @@
             // 
             // btnXoa
             // 
-            btnXoa.Location = new Point(500, 70);
+            btnXoa.Location = new Point(425, 70);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 2;
@@ -105,7 +129,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(341, 70);
+            btnSua.Location = new Point(307, 70);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 2;
@@ -127,7 +151,7 @@
             // 
             txtTenLoai.Location = new Point(187, 28);
             txtTenLoai.Name = "txtTenLoai";
-            txtTenLoai.Size = new Size(842, 25);
+            txtTenLoai.Size = new Size(913, 25);
             txtTenLoai.TabIndex = 1;
             // 
             // label1
@@ -144,7 +168,7 @@
             groupBox2.Controls.Add(dataGridView);
             groupBox2.Location = new Point(12, 155);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1054, 385);
+            groupBox2.Size = new Size(1121, 385);
             groupBox2.TabIndex = 0;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách loại sản phẩm";
@@ -155,29 +179,29 @@
             dataGridView.AllowUserToDeleteRows = false;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Columns.AddRange(new DataGridViewColumn[] { Id, TenLoai });
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { ID, TenLoai });
             dataGridView.Dock = DockStyle.Fill;
             dataGridView.Location = new Point(3, 21);
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
             dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView.Size = new Size(1048, 361);
+            dataGridView.Size = new Size(1115, 361);
             dataGridView.TabIndex = 0;
             // 
-            // Id
+            // ID
             // 
-            Id.DataPropertyName = "Id";
-            Id.FillWeight = 64.17112F;
-            Id.HeaderText = "ID";
-            Id.MinimumWidth = 6;
-            Id.Name = "Id";
+            ID.DataPropertyName = "ID";
+            ID.FillWeight = 32.08556F;
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
             // 
             // TenLoai
             // 
             TenLoai.DataPropertyName = "TenLoai";
-            TenLoai.FillWeight = 135.828888F;
-            TenLoai.HeaderText = "TenLoai";
+            TenLoai.FillWeight = 167.914459F;
+            TenLoai.HeaderText = "Tên loại sản phẩm";
             TenLoai.MinimumWidth = 6;
             TenLoai.Name = "TenLoai";
             // 
@@ -185,7 +209,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1094, 552);
+            ClientSize = new Size(1148, 552);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -214,7 +238,9 @@
         private TextBox txtTenLoai;
         private Label label1;
         private DataGridView dataGridView;
-        private DataGridViewTextBoxColumn Id;
+        private Button btnXuat;
+        private Button btnNhap;
+        private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn TenLoai;
     }
 }

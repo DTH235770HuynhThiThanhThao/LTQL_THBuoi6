@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnXuat = new Button();
+            btnNhap = new Button();
             btnThoat = new Button();
             btnHuyBo = new Button();
             btnLuu = new Button();
@@ -48,6 +50,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnXuat);
+            groupBox1.Controls.Add(btnNhap);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(btnHuyBo);
             groupBox1.Controls.Add(btnLuu);
@@ -58,14 +62,34 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1071, 123);
+            groupBox1.Size = new Size(1082, 123);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin hãng sản xuất";
             // 
+            // btnXuat
+            // 
+            btnXuat.Location = new Point(971, 70);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(94, 29);
+            btnXuat.TabIndex = 3;
+            btnXuat.Text = "Xuất";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
+            // btnNhap
+            // 
+            btnNhap.Location = new Point(858, 70);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(94, 29);
+            btnNhap.TabIndex = 4;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
+            // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(935, 70);
+            btnThoat.Location = new Point(749, 70);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(94, 29);
             btnThoat.TabIndex = 2;
@@ -75,7 +99,7 @@
             // 
             // btnHuyBo
             // 
-            btnHuyBo.Location = new Point(797, 70);
+            btnHuyBo.Location = new Point(637, 70);
             btnHuyBo.Name = "btnHuyBo";
             btnHuyBo.Size = new Size(94, 29);
             btnHuyBo.TabIndex = 2;
@@ -85,7 +109,7 @@
             // 
             // btnLuu
             // 
-            btnLuu.Location = new Point(649, 70);
+            btnLuu.Location = new Point(525, 70);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(94, 29);
             btnLuu.TabIndex = 2;
@@ -95,7 +119,7 @@
             // 
             // btnXoa
             // 
-            btnXoa.Location = new Point(500, 70);
+            btnXoa.Location = new Point(414, 70);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 2;
@@ -105,7 +129,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(341, 70);
+            btnSua.Location = new Point(299, 70);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 2;
@@ -127,7 +151,7 @@
             // 
             txtTenHangSanXuat.Location = new Point(187, 28);
             txtTenHangSanXuat.Name = "txtTenHangSanXuat";
-            txtTenHangSanXuat.Size = new Size(842, 27);
+            txtTenHangSanXuat.Size = new Size(878, 27);
             txtTenHangSanXuat.TabIndex = 1;
             // 
             // label1
@@ -182,7 +206,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1094, 647);
+            ClientSize = new Size(1109, 647);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "frmHangSanXuat";
@@ -210,5 +234,7 @@
         private DataGridView dataGridView;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn TenHangSanXuat;
+        private Button btnXuat;
+        private Button btnNhap;
     }
 }
